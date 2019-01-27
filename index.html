@@ -27,8 +27,9 @@
 
 	.letter {
 		font-family: sans-serif;
-		font-size: 55vh;
+		font-size: 65vh;
 		text-align: center;
+		height: 100%;
 	}
 
 	.title {
@@ -127,11 +128,22 @@
 			});
 
 			$(".letter-box").each(function() {
+				$(this).width("auto");
+				$(this).height("auto");
 				$(this).width($(this).width()*1.1);
 				$(this).height($(this).height());
 
 				$(this).click(function() {
-					$(this).html("<div class=\"title\">Test</div>");
+					var contents = $("<div>");
+					contents.height($(this).width());
+					contents.height($(this).height()*0.4);
+					contents.append($("<h1>Hello, world!</h1>"));
+
+					$(this).html("");
+					$(this).append(contents);
+
+					$(this).width("auto");
+					$(this).height("auto");
 				});
 			});
 
