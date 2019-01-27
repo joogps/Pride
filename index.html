@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LGBTQ+</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script></script>
+
+	<style>
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#acronym {
+		position: absolute;
+		left: 27vw;
+		white-space: nowrap;
+
+		display: flex;
+		align-items: center;
+	}
+
+	.letter {
+		padding: auto;
+		font-family: sans-serif;
+		font-size: 85vh;
+
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+	}
+
+	#flag {
+		margin: auto;
+		padding: 0px;
+
+		position: fixed;
+		top: 50%;
+		transform: perspective(1px) translateY(-50%);
+
+		z-index: 2;
+	}
+
+	.slice {
+		margin-top: 0px;
+		padding: 0px;
+
+		width: 20vw;
+		height: calc(85vh/6);
+
+		position: relative;
+		left: -20vw;
+	}
+
+	#red {
+		background-color: #E70000;
+		animation: red-slide 2s;
+	}
+
+	#orange {
+		background-color: #FF8C00;
+	}
+
+	#yellow {
+		background-color: #FFEF00;
+	}
+
+	#green {
+		background-color: #00811F;
+	}
+
+	#blue {
+		background-color: #0044FF;
+	}
+
+	#purple {
+		background-color: #760089;
+	}
+</style>
+</head>
+<body>
+	<div id="flag">
+		<div id="red" class="slice"></div>
+		<div id="orange" class="slice"></div>
+		<div id="yellow" class="slice"></div>
+		<div id="green" class="slice"></div>
+		<div id="blue" class="slice"></div>
+		<div id="purple" class="slice"></div>
+	</div>
+
+	<div id="acronym">
+		<div class="letter">L</div>
+		<div class="letter">G</div>
+		<div class="letter">B</div>
+		<div class="letter">T</div>
+		<div class="letter">T</div>
+		<div class="letter">2</div>
+		<div class="letter">Q</div>
+		<div class="letter">Q</div>
+		<div class="letter">I</div>
+		<div class="letter">A</div>
+		<div class="letter">A</div>
+		<div class="letter">P</div>
+		<div class="letter">A</div>
+		<div class="letter">G</div>
+		<div class="letter">B</div>
+		<div class="letter">G</div>
+		<div class="letter">P</div>
+	</div>
+
+	<script>
+		$(function(){
+			$(".letter").each(function() {
+				$(this).hover(function(){
+					$(this).animate({"font-size": "65vh"}, 500);
+				});
+			});
+
+			$(".slice").each(function() {
+				$(this).animate({left: "0px"}, 500+Math.random()*2000);
+			});
+
+			function scrollHorizontally(event) {
+				event = window.event || event;
+				var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+				document.documentElement.scrollLeft+= (delta*80);
+				document.body.scrollLeft+= (delta*80);
+				event.preventDefault();
+			}
+
+			if (window.addEventListener) {
+				window.addEventListener("mousewheel", scrollHorizontally, false);
+				window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+			} else {
+				window.attachEvent("onmousewheel", scrollHorizontally);
+			}
+		});
+	</script>
+</body>
+</html>
