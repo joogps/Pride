@@ -4,12 +4,14 @@
 	<title>LGBTQ+</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<style>
 	body {
 		margin: 0px;
 		padding: 0px;
+
+		display: table;
 	}
 
 	#acronym {
@@ -21,21 +23,20 @@
 		align-items: center;
 	}
 
+	.letter-box {
+		text-align: center;
+	}
+
 	.letter {
-		padding: auto;
 		font-family: sans-serif;
 		font-size: 85vh;
+	}
 
-		display: flex;
-		flex-direction:column;
-		align-items:center;
-		justify-content:center;
+	.title {
+		font-size: 20vh;
 	}
 
 	#flag {
-		margin: auto;
-		padding: 0px;
-
 		position: fixed;
 		top: 50%;
 		transform: perspective(1px) translateY(-50%);
@@ -91,35 +92,48 @@
 	</div>
 
 	<div id="acronym">
-		<div class="letter">L</div>
-		<div class="letter">G</div>
-		<div class="letter">B</div>
-		<div class="letter">T</div>
-		<div class="letter">T</div>
-		<div class="letter">2</div>
-		<div class="letter">Q</div>
-		<div class="letter">Q</div>
-		<div class="letter">I</div>
-		<div class="letter">A</div>
-		<div class="letter">A</div>
-		<div class="letter">P</div>
-		<div class="letter">A</div>
-		<div class="letter">G</div>
-		<div class="letter">B</div>
-		<div class="letter">G</div>
-		<div class="letter">P</div>
+		<div class="letter-box"><div class="letter">L</div></div>
+		<div class="letter-box"><div class="letter">G</div></div>
+		<div class="letter-box"><div class="letter">B</div></div>
+		<div class="letter-box"><div class="letter">T</div></div>
+		<div class="letter-box"><div class="letter">T</div></div>
+		<div class="letter-box"><div class="letter">2</div></div>
+		<div class="letter-box"><div class="letter">Q</div></div>
+		<div class="letter-box"><div class="letter">Q</div></div>
+		<div class="letter-box"><div class="letter">I</div></div>
+		<div class="letter-box"><div class="letter">A</div></div>
+		<div class="letter-box"><div class="letter">A</div></div>
+		<div class="letter-box"><div class="letter">P</div></div>
+		<div class="letter-box"><div class="letter">A</div></div>
+		<div class="letter-box"><div class="letter">G</div></div>
+		<div class="letter-box"><div class="letter">B</div></div>
+		<div class="letter-box"><div class="letter">G</div></div>
+		<div class="letter-box"><div class="letter">P</div></div>
 	</div>
 
 	<script>
 		$(function(){
-			$(".letter").each(function() {
-				$(this).hover(function(){
-					$(this).animate({"font-size": "65vh"}, 500);
+			$(".slice").each(function() {
+				$(this).css({left: -(Math.random()+1)/2*600+"px"});
+				$(this).animate({left: "0px"}, 500+Math.random()*1800);
+			});
+
+			$(window).resize(function(){
+				$(".letter-box").each(function() {
+					$(this).width("auto");
+					$(this).height("auto");
+					$(this).width($(this).width()*1.1);
+					$(this).height($(this).height());
 				});
 			});
 
-			$(".slice").each(function() {
-				$(this).animate({left: "0px"}, 500+Math.random()*2000);
+			$(".letter-box").each(function() {
+				$(this).width($(this).width()*1.1);
+				$(this).height($(this).height());
+
+				$(this).click(function() {
+					$(this).html("<div class=\"title\">Test</div>");
+				});
 			});
 
 			function scrollHorizontally(event) {
