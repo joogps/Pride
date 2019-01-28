@@ -34,6 +34,7 @@
 	}
 
 	.letter {
+		margin: auto;
 		font-family: sans-serif;
 		font-size: 85vh;
 		text-align: center;
@@ -41,18 +42,25 @@
 	}
 
 	.contents {
-		width: 80%;
-		height: 60%;
+		width: 65%;
+		height: 55%;
 		margin: 0 auto;
 		background-image: linear-gradient(rgb(250, 250, 250), rgb(220, 220, 220));
 		border-radius: 30px;
+		padding: 10%;
 	}
 
 	.title {
 		font-family: sans-serif;
+		font-weight: bold;
 		font-size: 3vh;
-		margin-left: 10%;
-		margin-top: 10%;
+	}
+
+	.description {
+		margin-top: 8px;
+		font-family: sans-serif;
+		white-space: pre-wrap;
+		word-wrap: break-word;
 	}
 
 	#flag {
@@ -132,20 +140,23 @@
 
 	<script>
 		$(function(){
-			$(".slice").each(function() {
-				$(this).css({left: -(Math.random()+1)/2*600+"px"});
-				$(this).animate({left: "0px"}, 600+Math.random()*1800);
+			$.getJSON("descriptions.json", function(data) {
+				$(".letter-box").each(function(i) {
+					$(this).click(function() {
+						var contents = $("<div>").addClass("contents");
+
+						contents.append($("<div>").html(data.order[i]["meaning"]).addClass("title"));
+
+						contents.append($("<div>").html(data.order[i]["description"]).addClass("description"));
+
+						$(this).html("");
+						$(this).append(contents);
+					});
+				});
 			});
 
-			$(".letter-box").each(function() {
-				$(this).click(function() {
-					var contents = $("<div>").addClass("contents");
-
-					contents.append($("<div>Hello, world!</div>").addClass("title"));
-
-					$(this).html("");
-					$(this).append(contents);
-				});
+			$(".slice").each(function() {
+				$(this).delay(Math.random()*1000).animate({left: "0px"}, 600+Math.random()*1800);
 			});
 
 			function scrollHorizontally(event) {
