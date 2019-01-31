@@ -1,0 +1,28 @@
+{
+	"slices": [
+		{
+			"color": "#E70000",
+			"html": "Sources:<br><a href=\"https://ok2bme.ca/resources/kids-teens/what-does-lgbtq-mean/\">ok2bme</a> and <a href=\"https://en.wikipedia.org/wiki/Main_Page\">Wikipedia</a>"
+		}, 
+		{
+			"color": "#FF8C00",
+			"html": ""
+		}, 
+		{
+			"color": "#FFEF00",
+			"html": ""
+		}, 
+		{
+			"color": "#00811F",
+			"html": ""
+		}, 
+		{
+			"color": "#0044FF",
+			"html": ""
+		}, 
+		{
+			"color": "#760089",
+			"html": ""
+		}
+	]
+}
