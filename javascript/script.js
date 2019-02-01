@@ -7,8 +7,8 @@ $(function(){
 
 			box.attr("href", l.wikipedia);
 
-			contents.append($("<div>").html(l.meaning).addClass("title"));
-			contents.append($("<div>").html(l.description).addClass("description"));
+			contents.append($("<div>").html(l.meaning).addClass("letter-contents-title"));
+			contents.append($("<div>").html(l.description).addClass("letter-contents-description"));
 
 			box.append(letter);
 			box.append(contents);
@@ -34,7 +34,11 @@ $(function(){
 					$(this).css("display", "none");
 					box.find(".letter").css("display", "inline-block");
 					box.stop();
-					box.find(".letter").animate({"font-size": "80vh", opacity: "1"}, 200);
+					box.find(".letter").animate({"font-size": "80vh", opacity: "1"}, 200, function() {
+						box.click(function(event) {
+							event.preventDefault();
+						});
+					});
 				});
 			});
 
@@ -49,7 +53,7 @@ $(function(){
 		for(let s of data.slices) {
 			let slice = $("<div>").addClass("slice").css("background-color", s.color);
 			let contents = $("<div>").addClass("slice-contents");
-			contents.html(s.html);
+			contents.append($("<div>").addClass("slice-text").html(s.html));
 
 			contents.find("a").click(function(event) {
 				event.preventDefault();
@@ -65,7 +69,11 @@ $(function(){
 
 				slice.mouseleave(function() {
 					slice.stop().animate({width: "20vw"}, 300);
-					contents.stop().animate({opacity: 0}, 300);
+					contents.stop().animate({opacity: 0}, 300, function() {
+						contents.find("a").click(function(event) {
+							event.preventDefault();
+						});
+					});
 				});
 			});
 

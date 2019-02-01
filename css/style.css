@@ -47,13 +47,13 @@ body {
 	transform: scale(0.5);
 }
 
-.title {
+.letter-contents-title {
 	font-family: sans-serif;
 	font-weight: bold;
-	font-size: 3vh;
+	font-size: 1.8em;
 }
 
-.description {
+.letter-contents-description {
 	margin-top: 8px;
 
 	font-family: sans-serif;
@@ -76,27 +76,57 @@ body {
 	position: relative;
 	left: -100%;
 
-	margin: 0;
-	padding: 0;
-
 	display: flex;
 	align-items: center;
 }
 
 .slice-contents {
-	width: 100%;
-
-	padding: 10%;
-
-	font-family: monospace;
-	text-align: center;
-	color: rgb(230, 230, 230);
-	text-shadow: 0 2px 2px black;
-
+	flex: 1 0 30vw;
 	opacity: 0;
 }
 
-.slice-contents > a {
+.slice-text {
+	width: 80%;
+
+	margin: 0 auto;
+
+	font-family: monospace;
+	color: rgb(230, 230, 230);
+	text-shadow: 0 2px 2px black;
+	text-align: center;
+}
+
+.slice-text > a {
 	color: rgb(210, 210, 210);
+}
+
+@media all and (max-width: 720px) {
+	.letter-contents {
+		font-size: 12.96px;
+	}
+
+	.slice-text {
+		font-size: 10.8px;
+	}
+}
+
+@media all and (min-width: 721px) {
+	.letter-contents {
+		font-size: 1.8vh;
+	}
+
+	.slice-text {
+		font-size: 1.5vw;
+	}
+}
+
+@media all and (min-width: 1081px) {
+	.letter-contents {
+		font-size: 19.44px;
+	}
+
+	.slice-text {
+		font-size: 16.2px;
+	}
 }
 
