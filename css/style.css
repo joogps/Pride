@@ -4,11 +4,12 @@ body {
 }
 
 #acronym {
+	height: 100%;
+
 	position: absolute;
 	left: 27vw;
-	white-space: nowrap;
 
-	height: 100%;
+	white-space: nowrap;
 
 	display: flex;
 	align-items: center;
@@ -23,18 +24,21 @@ body {
 }
 
 .letter {
+	margin: 0 auto;
+
 	font-family: sans-serif;
 	font-size: 80vh;
-	margin: 0 auto;
 }
 
 .letter-contents {
 	width: 60%;
 	height: 60%;
+
 	margin: 0 auto;
+	padding: 10%;
+
 	background-image: linear-gradient(rgb(253, 253, 253), rgb(220, 220, 220));
 	border-radius: 30px;
-	padding: 10%;
 
 	opacity: 0;
 
@@ -51,6 +55,7 @@ body {
 
 .description {
 	margin-top: 8px;
+
 	font-family: sans-serif;
 	white-space: pre-wrap;
 	word-wrap: break-word;
@@ -59,20 +64,20 @@ body {
 #flag {
 	position: fixed;
 	top: 50%;
-	transform: perspective(1px) translateY(-50%);
+	transform: translateY(-50%);
 
 	z-index: 2;
 }
 
 .slice {
-	margin: 0;
-	padding: 0;
-
 	width: 20vw;
 	height: calc(85vh/6);
 
 	position: relative;
 	left: -100%;
+
+	margin: 0;
+	padding: 0;
 
 	display: flex;
 	align-items: center;
@@ -80,16 +85,18 @@ body {
 
 .slice-contents {
 	width: 100%;
-	text-align: center;
+
+	padding: 10%;
 
 	font-family: monospace;
-	color: rgb(240, 240, 240);
-	text-shadow: 0 1px black;
+	text-align: center;
+	color: rgb(230, 230, 230);
+	text-shadow: 0 2px 2px black;
 
 	opacity: 0;
 }
 
 .slice-contents > a {
-	color: rgb(240, 240, 240);
+	color: rgb(210, 210, 210);
 }
 
