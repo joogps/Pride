@@ -19,22 +19,20 @@ $(function(){
 
 			box.mouseenter(function() {
 				let box = $(this);
-				box.find(".letter").animate({"font-size": "65vh", opacity: "0"}, 200, function(){
+				box.find(".letter").stop().animate({"font-size": "65vh", opacity: "0"}, 200, function(){
 					$(this).css("display", "none");
 					box.find(".letter-contents").css("display", "block");
-					box.stop();
-					box.find(".letter-contents").transition({scale: "1", opacity: "1"}, 200, function() {
+					box.find(".letter-contents").stop().transition({scale: "1", opacity: "1"}, 200, function() {
 						box.off("click");
 					});
 				});
 			});
 
 			box.mouseleave(function() {
-				box.find(".letter-contents").transition({scale: "0.5", opacity: "0"}, 200, function(){
+				box.find(".letter-contents").stop().transition({scale: "0.5", opacity: "0"}, 200, function(){
 					$(this).css("display", "none");
 					box.find(".letter").css("display", "inline-block");
-					box.stop();
-					box.find(".letter").animate({"font-size": "80vh", opacity: "1"}, 200, function() {
+					box.find(".letter").stop().animate({"font-size": "80vh", opacity: "1"}, 200, function() {
 						box.click(function(event) {
 							event.preventDefault();
 						});
@@ -47,7 +45,16 @@ $(function(){
 			box.width(box.width()*1.3);
 			box.height(box.height());
 		}
+
+		$(window).resize(function() {
+			$(".letter-box").width("auto");
+			$(".letter-box").height("auto");
+			$(".letter-box").width($(".letter-box").width()*1.3);
+			$(".letter-box").height($(".letter-box").height());
+		});
 	});
+
+
 
 	$.getJSON("data/slices.json", function(data) {
 		for(let s of data.slices) {

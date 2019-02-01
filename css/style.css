@@ -7,7 +7,7 @@ body {
 	height: 100%;
 
 	position: absolute;
-	left: 27vw;
+	left: 26vw;
 
 	white-space: nowrap;
 
@@ -61,6 +61,24 @@ body {
 	word-wrap: break-word;
 }
 
+@media all and (max-height: 480px) {
+	.letter-contents {
+		font-size: 8.64px;
+	}
+}
+
+@media all and (min-height: 481px){
+	.letter-contents {
+		font-size: 1.8vh;
+	}
+}
+
+@media all and (min-height: 921px) {
+	.letter-contents {
+		font-size: 16.56px;
+	}
+}
+
 #flag {
 	position: fixed;
 	top: 50%;
@@ -101,32 +119,19 @@ body {
 }
 
 @media all and (max-width: 720px) {
-	.letter-contents {
-		font-size: 12.96px;
-	}
-
 	.slice-text {
 		font-size: 10.8px;
 	}
 }
 
-@media all and (min-width: 721px) {
-	.letter-contents {
-		font-size: 1.8vh;
-	}
-
+@media all and (min-width: 721px){
 	.slice-text {
 		font-size: 1.5vw;
 	}
 }
 
 @media all and (min-width: 1081px) {
-	.letter-contents {
-		font-size: 19.44px;
-	}
-
 	.slice-text {
 		font-size: 16.2px;
 	}
 }
-
