@@ -8,7 +8,7 @@ body {
 	padding: 3%;
 	font-weight: bold;
 	font-family: sans-serif;
-	font-size: 2.25vw;
+	font-size: 22px;
 	position: absolute;
 	z-index: 2;
 	opacity: 0;
@@ -21,8 +21,8 @@ body {
 }
 
 #bubble1 {
-	width: 18vw;
-	left: 2vw;
+	width: 20vw;
+	left: 3vw;
 	background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(223, 223, 223));
 	border-radius: 15px 0 15px 15px;
 	text-align: left;
@@ -66,7 +66,7 @@ body {
 	height: 99%;
 
 	position: absolute;
-	left: 26vw;
+	left: 28vw;
 
 	white-space: nowrap;
 
@@ -149,7 +149,7 @@ body {
 }
 
 .slice {
-	width: 20vw;
+	width: 22vw;
 	height: calc(85vh/6);
 
 	position: relative;
