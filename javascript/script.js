@@ -89,7 +89,7 @@ $(function(){
 			box.find(".letter-contents").stop().transition({scale: "0.5", opacity: "0"}, 200, function(){
 				$(this).css("display", "none");
 				box.find(".letter").css("display", "inline-block");
-				box.find(".letter").stop().animate({"font-size": "80vh", opacity: "1"}, 200, function() {
+				box.find(".letter").stop().animate({"font-size": "75vh", opacity: "1"}, 200, function() {
 					box.click(function(event) {
 						event.preventDefault();
 					});
