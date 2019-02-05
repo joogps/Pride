@@ -16,19 +16,20 @@ $(function(){
 				$(window).off("click");
 				$("#bubble1").animate({opacity: "0"},function(){
 					$("#bubble1").css("display", "none");
-					createSlices();
 					$("#acronym").animate({opacity: "0"}, function() {
-						$("#acronym").css("display", "none");
-						$("#bubble2").css("display", "block");
-						$("#bubble2").animate({opacity: "1"}, function() {
-							$(window).click(function() {
-								$(window).off("click");
-								$("#bubble2").animate({opacity: "0"}, function(){
-									listenToSlices();
-									$("#bubble2").css("display", "none");
-									$("#acronym").css("display", "flex");
-									$("#acronym").animate({opacity: "1"}, function() {
-										listenToLetters();
+						createSlices(function(){
+							$("#acronym").css("display", "none");
+							$("#bubble2").css("display", "block");
+							$("#bubble2").animate({opacity: "1"}, function() {
+								$(window).click(function() {
+									$(window).off("click");
+									$("#bubble2").animate({opacity: "0"}, function(){
+										listenToSlices();
+										$("#bubble2").css("display", "none");
+										$("#acronym").css("display", "flex");
+										$("#acronym").animate({opacity: "1"}, function() {
+											listenToLetters();
+										});
 									});
 								});
 							});
@@ -100,20 +101,22 @@ $(function(){
 		$(".letter-box").css("cursor", "pointer");
 	}
 
-	function createSlices() {
+	function createSlices(callback) {
 		$.getJSON("data/slices.json", function(data) {
 			for(let s of data.slices) {
 				let slice = $("<div>").addClass("slice").css("background-color", s.color);
 				let contents = $("<div>").addClass("slice-contents");
-				contents.append($("<div>").addClass("slice-text").html(s.html));
+				let text = $("<div>").addClass("slice-text").html(s.html);
 
-				contents.css("cursor", "default");
-				contents.find("a").css("cursor", "default");
-				contents.find("a").click(function(event) {
+				contents.append(text);
+
+				text.css("cursor", "default");
+				text.find("a").css("cursor", "default");
+				text.find("a").click(function(event) {
 					event.preventDefault();
 				});
 
-				slice.delay(Math.random()*800).animate({left: "0px"}, 300+Math.random()*1600);
+				slice.delay(Math.random()*800).animate({left: "0px"}, 300+Math.random()*1600, callback);
 
 				slice.append(contents);
 				$("#flag").append(slice);
@@ -136,7 +139,7 @@ $(function(){
 		$(".slice").mouseleave(function() {
 			let slice = $(this);
 			let contents = slice.find(".slice-contents");
-			slice.stop().animate({width: "20vw"}, 300);
+			slice.stop().animate({width: "22vw"}, 300);
 			contents.stop().animate({opacity: 0}, 300, function() {
 				contents.css("cursor", "default");
 				contents.find("a").css("cursor", "default");

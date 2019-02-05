@@ -21,9 +21,9 @@ body {
 }
 
 #bubble1 {
-	width: 50vw;
-	left: 4vw;
-	background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(223, 223, 223));
+	width: 20vw;
+	left: 2vw;
+	background-image: linear-gradient(to right, #FFFFFF, #CECECE);
 	border-radius: 15px 0 15px 15px;
 	text-align: left;
 }
@@ -31,7 +31,7 @@ body {
 #bubble2 {
 	width: 25vw;
 	left: 28vw;
-	background-image: linear-gradient(to left, rgb(253, 253, 253), rgb(223, 223, 223));
+	background-image: linear-gradient(to left, #FFFFFF, #CECECE);
 	border-radius: 0 15px 15px 15px;
 	text-align: left;
 }
@@ -41,9 +41,9 @@ body {
 	width: 0px;
 	height: 0px;
 	position: absolute;
-	border-left: 15px solid rgb(223, 223, 223);
+	border-left: 15px solid #CECECE;
 	border-right: 15px solid transparent;
-	border-top: 15px solid rgb(223, 223, 223);
+	border-top: 15px solid #CECECE;
 	border-bottom: 15px solid transparent;
 	right:-29px;
 	top: 0px;
@@ -55,8 +55,8 @@ body {
 	height: 0px;
 	position: absolute;
 	border-left: 15px solid transparent;
-	border-right: 15px solid rgb(223, 223, 223);
-	border-top: 15px solid rgb(223, 223, 223);
+	border-right: 15px solid #CECECE;
+	border-top: 15px solid #CECECE;
 	border-bottom: 15px solid transparent;
 	left: -29px;
 	top: 0px;
@@ -98,7 +98,7 @@ body {
 	margin: 0 auto;
 	padding: 10%;
 
-	background-image: linear-gradient(rgb(253, 253, 253), rgb(220, 220, 220));
+	background-image: linear-gradient(#FFFFFF, #CECECE);
 	border-radius: 30px;
 
 	opacity: 0;
@@ -170,13 +170,14 @@ body {
 	margin: 0 auto;
 
 	font-family: monospace;
-	color: rgb(230, 230, 230);
 	text-shadow: 0 2px 2px black;
 	text-align: center;
+
+	color: #DDDDDD;
 }
 
 .slice-text > a {
-	color: rgb(210, 210, 210);
+	color: #D1D1D1;
 }
 
 @media all and (max-width: 720px) {
