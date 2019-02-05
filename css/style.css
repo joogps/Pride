@@ -21,8 +21,8 @@ body {
 }
 
 #bubble1 {
-	width: 20vw;
-	left: 3vw;
+	width: 22vw;
+	left: 4vw;
 	background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(223, 223, 223));
 	border-radius: 15px 0 15px 15px;
 	text-align: left;
