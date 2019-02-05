@@ -12,7 +12,7 @@ $(function(){
 	$("#acronym").animate({opacity: "1"}, function(){
 		$("#bubble1").css("display", "block");
 		$("#bubble1").animate({opacity: "1"}, function() {
-			$("body").click(function() {
+			$(window).click(function() {
 				$(window).off("click");
 				$("#bubble1").animate({opacity: "0"},function(){
 					$("#bubble1").css("display", "none");
@@ -22,7 +22,7 @@ $(function(){
 						$("#bubble2").css("display", "block");
 						$("#bubble2").animate({opacity: "1"}, function() {
 							$(window).click(function() {
-								$("body").off("click");
+								$(window).off("click");
 								$("#bubble2").animate({opacity: "0"}, function(){
 									listenToSlices();
 									$("#bubble2").css("display", "none");
