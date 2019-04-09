@@ -20,6 +20,10 @@ body {
 	display: none;
 }
 
+#bubble1, #bubble2 {
+	z-index: 3;
+}
+
 #bubble1 {
 	width: 20vw;
 	left: 2vw;
@@ -140,11 +144,17 @@ body {
 	}
 }
 
-#flag {
-	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
+#align-flag {
+	position: absolute;
+	height: 100%;
 
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+#flag {
 	z-index: 2;
 }
 
@@ -173,7 +183,7 @@ body {
 	text-shadow: 0 2px 2px black;
 	text-align: center;
 
-	color: #DDDDDD;
+	color: #EEEEEE;
 }
 
 .slice-text > a {

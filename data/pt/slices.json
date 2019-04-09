@@ -1,0 +1,28 @@
+{
+	"slices": [
+		{
+			"color": "#E70000",
+			"html": "Fontes:<br><a href=\"https://ok2bme.ca/resources/kids-teens/what-does-lgbtq-mean/\">ok2bme</a> and <a href=\"https://en.wikipedia.org/wiki/Main_Page\">Wikipedia</a>"
+		}, 
+		{
+			"color": "#FF8C00",
+			"html": "<a href=\"https://pt.wikipedia.org/wiki/Bandeira_arco-íris_(movimento_LGBT)\">Bandeira LGBTQ+</a>."
+		}, 
+		{
+			"color": "#FFEF00",
+			"html": "<a href=\"https://twitter.com/search?q=%23LoveWins&src=tyah\">#LoveWins</a><br><a href=\"https://twitter.com/search?q=%23LoveIsLove&src=tyah\">#LoveIsLove</a>"
+		}, 
+		{
+			"color": "#00811F",
+			"html": "<a href=\"https://joogps.github.io/Pride/\">English</a>"
+		}, 
+		{
+			"color": "#0044FF",
+			"html": "<a href=\"https://github.com/joogps/Pride\">Ver no GitHub</a>"
+		}, 
+		{
+			"color": "#760089",
+			"html": "Feito por <a href=\"https://github.com/joogps\">João Gabriel</a>"
+		}
+	]
+}
