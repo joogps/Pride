@@ -1,6 +1,7 @@
 $(function(){
 	let lettersSrc;
 	let slicesSrc;
+	let bubblesSrc;
 
 	var url = new URL(window.location.href);
 	var lang = url.searchParams.get('lang');
@@ -8,41 +9,46 @@ $(function(){
 	if( lang && lang.includes('pt')) {
 		lettersSrc = 'data/pt/letters.json';
 		slicesSrc = 'data/pt/slices.json';
+		bubblesSrc = 'data/pt/bubbles.json';
 	} else {
 		lettersSrc = 'data/letters.json';
 		slicesSrc = 'data/slices.json';
-	}
-
-	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-		$('#bubble1').html('Touch a letter to see its meaning. Do it again to learn more about it.');
-		$('#bubble2').html('Touch the rainbow slices to view details about the webpage.');
-	} else{
-		$('#bubble1').html('Hover your mouse cursor onto a letter to see its meaning. Click to learn more about it.');
-		$('#bubble2').html('Hover your mouse cursor onto the rainbow slices to view details about the webpage.');
+		bubblesSrc = 'data/bubbles.json';
 	}
 
 	if (Cookies.get('visited') == 'true') {
-		$('#bubble1, #bubble2').fitText(0.9)
+		$.getJSON(bubblesSrc, function(data) {
+			let bubbles = data.bubbles;
+			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+				$('#bubble1').html(bubbles[0].mobile);
+				$('#bubble2').html(bubbles[1].mobile);
+			} else{
+				$('#bubble1').html(bubbles[0].desktop);
+				$('#bubble2').html(bubbles[1].desktop);
+			}
 
-		createLetters(lettersSrc);
-		$('#acronym').animate({opacity: 1}, function(){
-			$('#bubble1').css('display', 'block');
-			$('#bubble1').animate({opacity: 1}, function() {
-				$(window).click(function() {
-					$(window).off('click');
-					$('#bubble1').animate({opacity: 0},function(){
-						$('#bubble1').css('display', 'none');
-						$('#acronym').animate({opacity: 0}, function() {
-							createSlices(slicesSrc, function(){
-								$('#bubble2').css('display', 'block');
-								$('#bubble2').animate({opacity: 1}, function() {
-									$(window).click(function() {
-										$(window).off('click');
-										$('#bubble2').animate({opacity: 0}, function(){
-											listenToSlices($('.slice'));
-											$('#bubble2').css('display', 'none');
-											$('#acronym').css('display', 'flex');
-											$('#acronym').animate({opacity: 1}, listenToLetters);
+			$('#bubble1, #bubble2').fitText(0.9)
+
+			createLetters(lettersSrc);
+			$('#acronym').animate({opacity: 1}, function(){
+				$('#bubble1').css('display', 'block');
+				$('#bubble1').animate({opacity: 1}, function() {
+					$(window).on('click', function() {
+						$(window).off('click');
+						$('#bubble1').animate({opacity: 0},function(){
+							$('#bubble1').css('display', 'none');
+							$('#acronym').animate({opacity: 0}, function() {
+								createSlices(slicesSrc, function(){
+									$('#bubble2').css('display', 'block');
+									$('#bubble2').animate({opacity: 1}, function() {
+										$(window).on('click', function() {
+											$(window).off('click');
+											$('#bubble2').animate({opacity: 0}, function(){
+												listenToSlices($('.slice'));
+												$('#bubble2').css('display', 'none');
+												$('#acronym').css('display', 'flex');
+												$('#acronym').animate({opacity: 1}, listenToLetters);
+											});
 										});
 									});
 								});
@@ -51,15 +57,21 @@ $(function(){
 					});
 				});
 			});
-		});
 
-		Cookies.set('visited', 'true', {expires: 7});
+			Cookies.set('visited', 'true', {expires: 7});
+		});
 	} else {
 		createLetters(lettersSrc);
 		$('#acronym').animate({opacity: 1}, 500, listenToLetters);
 
 		createSlices(slicesSrc, listenToSlices);
 	}
+
+	$(window).resize(function() {
+		$('#acronym').empty();
+		createLetters(lettersSrc);
+		listenToLetters();
+	});
 
 	function createLetters(src) {
 		$.getJSON(src, function(data) {
@@ -84,13 +96,6 @@ $(function(){
 				box.width(box.width()*1.3);
 				box.height(box.height());
 			}
-
-			$(window).resize(function() {
-				$('.letter-box').width('auto');
-				$('.letter-box').height('auto');
-				$('.letter-box').width($('.letter-box').width()*1.3);
-				$('.letter-box').height($('.letter-box').height());
-			});
 		});
 	}
 

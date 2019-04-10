@@ -10,7 +10,7 @@ body {
 	font-family: sans-serif;
 	font-size: 22px;
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 	opacity: 0;
 
 	position: absolute;
@@ -18,10 +18,8 @@ body {
 	transform: translateY(-50%);
 
 	display: none;
-}
 
-#bubble1, #bubble2 {
-	z-index: 3;
+	user-select: none;
 }
 
 #bubble1 {
@@ -92,7 +90,9 @@ body {
 	margin: 0 auto;
 
 	font-family: sans-serif;
-	font-size: 75vh;
+	font-size: 80vh;
+
+	user-select: none;
 }
 
 .letter-contents {
@@ -184,6 +184,8 @@ body {
 	text-align: center;
 
 	color: #EEEEEE;
+
+	user-select: none;
 }
 
 .slice-text > a {

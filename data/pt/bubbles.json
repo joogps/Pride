@@ -1,0 +1,12 @@
+{
+	"bubbles": [
+		{	
+			"desktop": "Passe o seu mouse sobre uma letra para ver o seu significado. Clique para aprender mais sobre ele.",
+			"mobile": "Toque uma letra para ver o seu significado. Faça de novo para ver o seu significado."
+		},
+		{	
+			"desktop": "Passe o seu mouse pelas fatias do arco-íris para ver detalhes sobre a página.",
+			"mobile": "Toque as fatias do arco-íris para ver detalhes sobre a página."
+		}
+	]
+}

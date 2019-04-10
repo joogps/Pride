@@ -1,0 +1,12 @@
+{
+	"bubbles": [
+		{	
+			"desktop": "Hover your mouse cursor over a letter to see its meaning. Click to learn more about it.",
+			"mobile": "Touch a letter to see its meaning. Do it again to learn more about it."
+		},
+		{	
+			"desktop": "Hover your mouse cursor over the rainbow slices to view details about the webpage.",
+			"mobile": "Touch the rainbow slices to view details about the webpage."
+		}
+	]
+}
