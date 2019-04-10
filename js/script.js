@@ -5,7 +5,7 @@ $(function(){
 	var url = new URL(window.location.href);
 	var lang = url.searchParams.get('lang');
 
-	if(lang.includes('pt')) {
+	if( lang && lang.includes('pt')) {
 		lettersSrc = 'data/pt/letters.json';
 		slicesSrc = 'data/pt/slices.json';
 	} else {
@@ -24,7 +24,7 @@ $(function(){
 	if (Cookies.get('visited') == 'true') {
 		$('#bubble1, #bubble2').fitText(0.9)
 
-		createLetters('data/letters.json');
+		createLetters(lettersSrc);
 		$('#acronym').animate({opacity: 1}, function(){
 			$('#bubble1').css('display', 'block');
 			$('#bubble1').animate({opacity: 1}, function() {
@@ -33,7 +33,7 @@ $(function(){
 					$('#bubble1').animate({opacity: 0},function(){
 						$('#bubble1').css('display', 'none');
 						$('#acronym').animate({opacity: 0}, function() {
-							createSlices('data/slices.json', function(){
+							createSlices(slicesSrc, function(){
 								$('#bubble2').css('display', 'block');
 								$('#bubble2').animate({opacity: 1}, function() {
 									$(window).click(function() {
@@ -55,10 +55,10 @@ $(function(){
 
 		Cookies.set('visited', 'true');
 	} else {
-		createLetters('data/letters.json');
+		createLetters(lettersSrc);
 		$('#acronym').animate({opacity: 1}, 500, listenToLetters);
 
-		createSlices('data/slices.json', listenToSlices);
+		createSlices(slicesSrc, listenToSlices);
 	}
 
 	function createLetters(src) {
