@@ -53,7 +53,7 @@ $(function(){
 			});
 		});
 
-		Cookies.set('visited', 'true');
+		Cookies.set('visited', 'true', {expires: 7});
 	} else {
 		createLetters(lettersSrc);
 		$('#acronym').animate({opacity: 1}, 500, listenToLetters);
