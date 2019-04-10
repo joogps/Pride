@@ -4,103 +4,103 @@
 			"letter": "L",
 			"meaning": "Lésbica",
 			"description": "Lésbica é o termo para homossexualidade feminina. Uma mulher que experimenta amor romântico ou atração sexual por outras mulheres.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Lesbian"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Lésbica"
 		}, 
 		{
 			"letter": "G",
 			"meaning": "Gay",
 			"description": "Gay é um termo primeiramente utilizado para se referir à uma pessoa homossexual ou a qualidade de ser homossexual. Gay é geralmente utilizado para descrever homens homossexuais, mas mulheres lésbicas também se enqudram na categoria.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Gay"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Gay"
 		},
 		{
 			"letter": "B",
 			"meaning": "Bisexual",
 			"description": "A bissexualidade é a atração romântica, sexual ou o comportamento sexual voltado tanto para homens quanto para mulheres ou a atração romântica ou sexual por pessoas de qualquer sexo ou identidade de gênero; este último aspecto é tembém chamado de panssexualidade.",			
-			"wikipedia": "https://en.wikipedia.org/wiki/Bisexuality"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Bissexualidade"
 		},
 		{
 			"letter": "T",
 			"meaning": "Trangênero",
 			"description": "Transgênero é um termo abrangente para pessoas cuja identidade de gênero difere do que é tipicamente associado com o sexo atríbuido à elas no seu nascimento. Ás vezes, é abreviado para trans.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Transgender"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Transgênero"
 		},
 		{
 			"letter": "T",
 			"meaning": "Transsexual",
 			"description": "Pessoas transsexuais experienciam uma identidade de gênero incosistente ou não culturamente associada com o sexo no qual elas foram atribuídas em seu nascimento, e desejam transicionar permanentemente para o gênero que elas se identificam.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Transsexual"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Transexualidade"
 		},
 		{
 			"letter": "2",
 			"meaning": "Dois espíritos",
 			"description": "Dois espíritos é um termo abrangente moderno usado por alguns norte-americanos indígenas para descrever indivíduos de gênero variante em suas comunidades, especificamente pessoas dentro de comunidades indígenas que são vistas tendo 'espirítos' tanto 'masculinos' quanto 'femininos' dentro de si.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Two-spirit"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Dois-espíritos"
 		},
 		{
 			"letter": "Q",
 			"meaning": "Queer",
 			"description": "Queer é um termo abrangente para minoridades sexuais e gêneros que não são heterossexuais ou cisgênero. O termo era originalmente utilizado de forma pejorativa contra aqueles com desejos de mesmo sexo mas, começando no final da década de 1980, o ativismo queer tomou o cenário da palavra.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Queer"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Queer"
 		},
 		{
 			"letter": "Q",
 			"meaning": "Se questionando",
 			"description": "O questionamento de alguém sobre o seu gênero, identidade sexual, orientação sexual, ou os três é um processo de exploração por pessoas que podem estar inseguras, ainda se descobrindo e/ou preocupadas em aplicar uma etiqueta social em si mesmas por inúmeras razões.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Questioning_(sexuality_and_gender)"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Se_questionando_(sexualidade_e_gênero)"
 		},
 		{
 			"letter": "I",
 			"meaning": "Intersexualidade",
 			"description": "Intersexualidade é uma variação nas características sexuais, incluindo cromossomeo, gônadas, ou genitais que não permitem um indivíduo set estritamente identificado como homem ou mulher.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Intersex"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Intersexualidade"
 		},
 		{
 			"letter": "A",
 			"meaning": "Assexual",
 			"description": "Assexualidade é a falta de atração sexual para qualquer um, ou baixo ou inexistente interesse em atividades sexuais. Também pode ser considerado a falta de uma orientação sexual ou alguma de suas variações assim, junto da heterossexualidade, homossexualidade e bissexualidade.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Asexuality"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Assexualidade"
 		},
 		{
 			"letter": "A",
 			"meaning": "Aliado",
 			"description": "Um aliado An Ally é uma pessoa que se considera amiga da comunidade LGBTQ+.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Straight_ally"
+			"wikipedia": "https://pt.wikipedia.org/wiki/GLS"
 		},
 		{
 			"letter": "P",
 			"meaning": "Pansexual",
 			"description": "Pansexualidade, ou omnisexualidade, é a atração sexual, amor romântico, ou atração emocional voltados para pessoas de qualquer sexo ou identidade de gênero. Pessoas panssexuais também podem se referir como cegas de gênero, afirmando que gênero e sexo são insignificante ou irrevelantes na hora de determinar se vão, ou não, ser atraídos sexualmente por outros.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Pansexuality"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Pansexualidade"
 		},
 		{
 			"letter": "A",
 			"meaning": "Agênero",
 			"description": "Pessoas agênero, também chamadas de pessoas sem gênero ou não generadas são aquelas que se indetificam como não tendo gênero ou identidade de gênero. Essa categoria inclui uma abrangência muito grande sobre as identidadeds que não conformam com as normas tradicionais de gênero.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Genderqueer#Definitions_and_identity"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Não-binariedade#Ageneridade_e_gênero_neutro"
 		},
 		{
 			"letter": "Q",
 			"meaning": "Não-binariedade",
 			"description": "Não-binariedade, gênero não binário ou gender queer é um termo abrangente para identidades de gênero que não são exclusivamente masculinos ou femininos e que estão fora da binariedade de gênero e cisnormatividade.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Genderqueer"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Não-binariedade"
 		},
 		{
 			"letter": "B",
 			"meaning": "Bigênero",
 			"description": "Bigênero é uma identidade de gênero onde a pessoa oscila entre as identidades de gênero ou comportamentos masculinos e femininos, possivelmente dependendo do contexto. Alguns indíviduos bigêneros expressam suas personalidades 'masculinas' e 'femininas' de forma distintas; outros se identificam com os dois gêneros simultaneamente.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Bigender"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Bigeneridade"
 		},
 		{
 			"letter": "G",
 			"meaning": "Variante de gênero",
 			"description": "Inconformidade, inconformância, não-conformidade, não-conformância, variância ou variação de gênero é o comportamento ou expressão de gênero de um indivíduo que não corresponde com as normas masculinas e femininas de gênero. Pessoas que apresentam não-conformidade de gênero podem ser chamadas de variantes, não-conformantes de gênero, gênero-diversas, gênero-atípicas ou genderqueer, podendo ou não serem transgêneras em sua identidade de gênero. Algumas pessoas intersexuais também podem apresentar variância de gênero.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Gender_variance"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Variância_de_gênero"
 		},
 		{
 			"letter": "P",
 			"meaning": "Pangênero",
 			"description": "Pessoas pangênero são aqueles que sentem que se identificam com todos os gêneros. O termo tem uma grande parcela de sobreposição com a não-binariedade. Por conta de sua natureza tão abrangente, a apresentação e o uso de pronomes varia entre diferentes pessoas pangênero.",
-			"wikipedia": "https://en.wikipedia.org/wiki/Pangender"
+			"wikipedia": "https://pt.wikipedia.org/wiki/Pangeneridade"
 		}
 	]
 }
